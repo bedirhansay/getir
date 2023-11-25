@@ -11,6 +11,7 @@ module.exports = {
       colors: {
         yellow: "#F7D102",
         purple: "#5736C5",
+        grayBackground: "#f5f5f5",
       },
       screens: {
         xs: { max: "319px" },
