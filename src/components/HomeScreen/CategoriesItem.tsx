@@ -1,12 +1,24 @@
 import React, { FC } from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
-import { TCategory } from "../../utils/types";
+import { TCategory } from "utils";
+import { useNavigation } from "@react-navigation/native";
+
 type CategoriesItemProps = {
   category: TCategory;
 };
 export const CategoriesItem: FC<CategoriesItemProps> = ({ category }) => {
+  const nav = useNavigation();
+
+  const touchHandler = (id: any) => {
+    // @ts-ignore
+    nav.navigate("CategoryDetails", { id: id });
+  };
+
   return (
-    <TouchableOpacity className="flex items-center space-y-2">
+    <TouchableOpacity
+      onPress={() => touchHandler(category.id)}
+      className="flex items-center space-y-2"
+    >
       <Image
         style={{
           backgroundColor: "white",

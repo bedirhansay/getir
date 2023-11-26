@@ -1,7 +1,6 @@
-import React from "react";
 import { View } from "react-native";
-import categoriesGetir from "../../../assets/categoriesGetir";
 import { CategoriesItem } from "./CategoriesItem";
+import categoriesGetir from "assets/categoriesGetir";
 
 export const MainCategories = () => {
   return (

@@ -1,6 +1,6 @@
 import { createStackNavigator } from "@react-navigation/stack";
-import { HomeScreen } from "screens";
-import { HomeNavigatorOptions } from "utils";
+import { CategoryFilterScreen, HomeScreen } from "screens";
+import { CategoryDetailNavigatorOptions, HomeNavigatorOptions } from "utils";
 
 const Stack = createStackNavigator();
 
@@ -11,6 +11,11 @@ export const HomeNavigators = () => {
         name="Home"
         component={HomeScreen}
         options={HomeNavigatorOptions}
+      />
+      <Stack.Screen
+        name="CategoryDetails"
+        component={CategoryFilterScreen}
+        options={CategoryDetailNavigatorOptions}
       />
     </Stack.Navigator>
   );
