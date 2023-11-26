@@ -1,7 +1,7 @@
 import { View, Text, Image, Dimensions } from "react-native";
 import React from "react";
 import { Entypo } from "@expo/vector-icons";
-import { Colors } from "../../constant/colors";
+import { Colors } from "../../constants/colors";
 
 export default function Header() {
   return (

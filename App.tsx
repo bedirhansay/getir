@@ -1,11 +1,11 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import { HomeScreen } from "screens";
+import { NavigationContainer } from "@react-navigation/native";
+import { HomeNavigators, RootNavigators } from "navigations";
+import "react-native-gesture-handler";
 
 export default function App() {
   return (
-    <View className="mt-20">
-      <HomeScreen />
-    </View>
+    <NavigationContainer>
+      <RootNavigators />
+    </NavigationContainer>
   );
 }
