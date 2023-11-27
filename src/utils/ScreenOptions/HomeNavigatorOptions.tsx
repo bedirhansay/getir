@@ -1,3 +1,6 @@
+import { Button } from "components/ui/Button";
+import { Colors } from "constants/colors";
+import { useLayoutEffect } from "react";
 import { Image, Text } from "react-native";
 
 export const HomeNavigatorOptions = () => {
@@ -22,6 +25,40 @@ export const CategoryDetailNavigatorOptions = () => {
     headerStyle: { backgroundColor: "#5C3EBC" },
     headerTitle: () => (
       <Text className="font-bold text-lg text-white">Ürünler</Text>
+    ),
+  };
+};
+
+export const ProductDetailNavigatorOptions = ({ navigation }) => {
+  const goBack = () => {
+    navigation.goBack();
+  };
+
+  return {
+    headerShown: true,
+    headerTintColor: "white",
+    headerBackTitleVisible: false,
+    tabBarStyle: { display: "none" },
+    headerStyle: { backgroundColor: "#5C3EBC" },
+    headerTitle: () => (
+      <Text className="font-bold text-lg text-white">Ürün Detayı</Text>
+    ),
+    headerLeft: () => (
+      <Button
+        className="pl-4"
+        icon="close"
+        size={32}
+        color="white"
+        onPress={goBack}
+      />
+    ),
+    headerRight: () => (
+      <Button
+        className="pr-4"
+        size={32}
+        color={Colors.darkPurple}
+        icon="heart"
+      />
     ),
   };
 };

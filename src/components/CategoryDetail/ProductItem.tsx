@@ -10,15 +10,23 @@ import React from "react";
 import { Button } from "components/ui/Button";
 import { Colors } from "constants/colors";
 import { Product } from "utils";
+import { useNavigation } from "@react-navigation/native";
+import { StackNavigation } from "utils/types/NavigatorTypes";
+
+type ProductDetailsParams = {
+  item: Product;
+};
 
 export const ProductItem = ({ item }: { item: Product }) => {
   const { width, height } = Dimensions.get("window");
   const productWidth = width / 3;
+  const nav = useNavigation<StackNavigation>();
   return (
     <Pressable
       style={{
         width: width * 0.285,
       }}
+      onPress={() => nav.navigate("ProductDetails", { item: item })}
       className="ml-4 mb-4 mt-4 items-center flex flex-col  "
     >
       <Image
