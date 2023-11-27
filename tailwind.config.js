@@ -13,6 +13,7 @@ module.exports = {
         purple: "#5736C5",
         grayBackground: "#f5f5f5",
         filterBg: "#7849F7",
+        heartColor: "#32177a",
       },
       screens: {
         xs: { max: "319px" },

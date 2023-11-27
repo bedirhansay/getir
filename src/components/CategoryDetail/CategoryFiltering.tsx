@@ -13,7 +13,6 @@ const CategoryBox = ({
   category: TCategory;
   item: any;
 }) => {
-  console.log(item);
   return (
     <View
       style={{
