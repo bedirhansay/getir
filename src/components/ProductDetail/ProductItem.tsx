@@ -1,23 +1,16 @@
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  Image,
-  Dimensions,
-  Pressable,
-} from "react-native";
-import React from "react";
+import { View, Text, Image, Dimensions, Pressable } from "react-native";
+import React, { FC } from "react";
 import { Button } from "components/ui/Button";
 import { Colors } from "constants/colors";
-import { Product } from "utils";
+import { TProduct } from "utils";
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigation } from "utils/types/NavigatorTypes";
 
 type ProductDetailsParams = {
-  item: Product;
+  item: TProduct;
 };
 
-export const ProductItem = ({ item }: { item: Product }) => {
+export const ProductItem: FC<ProductDetailsParams> = ({ item }) => {
   const { width, height } = Dimensions.get("window");
   const productWidth = width / 3;
   const nav = useNavigation<StackNavigation>();

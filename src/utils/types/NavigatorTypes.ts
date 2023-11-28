@@ -1,5 +1,5 @@
 import { NavigationProp } from "@react-navigation/native";
-import { Product } from "./types";
+import { TProduct } from "./types";
 
 export type ScreenNames = [
   "Anasayfa",
@@ -12,7 +12,7 @@ export type ScreenNames = [
   "List"
 ];
 type ProductDetailsParams = {
-  item: Product;
+  item: TProduct;
 };
 
 export type RootStackParamList = {
@@ -21,7 +21,7 @@ export type RootStackParamList = {
   Personal: undefined;
   Gift: undefined;
   CategoryDetails: undefined;
-  ProductDetails: ProductDetailsParams; // ProductDetails ekranı için parametre türü
+  ProductDetails: ProductDetailsParams;
   Home: undefined;
   List: undefined;
 };

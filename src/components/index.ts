@@ -4,4 +4,7 @@ export * from "./HomeScreen/Header";
 export * from "./HomeScreen/MainCategories";
 export * from "./CategoryDetail/CategoryFiltering";
 export * from "./CategoryDetail/TypeFiltering";
-export * from "./CategoryDetail/ProductItem";
+export * from "./ProductDetail/ProductItem";
+export * from "./ProductDetail/ImageCarousel";
+export * from "./ProductDetail/DetailBox";
+export * from "./ProductDetail/DetailFeatures";

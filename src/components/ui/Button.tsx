@@ -10,6 +10,7 @@ type ButtonProps = {
   color?: string;
   size?: number;
   className?: ClassNameValue;
+  textClassname?: string[]; // Opsiyonel hale getirildi
   onPress?: () => void;
 };
 
@@ -20,6 +21,7 @@ export const Button: FC<ButtonProps> = ({
   color,
   size,
   className,
+  textClassname, // textClassname burada direk kullanılır.
   ...props
 }) => {
   return (
@@ -29,7 +31,7 @@ export const Button: FC<ButtonProps> = ({
       className={cn("flex items-center justify-center", className)}
     >
       <Ionicons name={icon} size={size} color={color} />
-      {title ? <Text>{title}</Text> : null}
+      {title ? <Text className={textClassname?.join(" ")}>{title}</Text> : null}
     </TouchableOpacity>
   );
 };

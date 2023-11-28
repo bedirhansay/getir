@@ -5,7 +5,7 @@ export type TCategory = {
   subCategories: string[];
 };
 
-export type Product = {
+export type TProduct = {
   readonly id: string;
   readonly image: string;
   readonly images: string[];
@@ -15,15 +15,7 @@ export type Product = {
   readonly fiyatIndirimli?: number;
 };
 
-// Category.ts
-export type Category = {
-  readonly id: string;
-  readonly name: string;
-  readonly src: string;
-  readonly subCategories: string[];
-};
-
-export type Filtering = {
+export type TFiltering = {
   readonly id: string;
   readonly name: string;
 };

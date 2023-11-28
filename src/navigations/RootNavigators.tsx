@@ -4,6 +4,8 @@ import { HomeNavigators } from "./HomeNavigators";
 import { Button } from "components/ui/Button";
 import { RootNavigatorOptions } from "utils/ScreenOptions/RootNavigatorOptions";
 import { RootStackParamList } from "utils/types/NavigatorTypes";
+import { Ionicons } from "@expo/vector-icons";
+import { GiftScreen, ProfileScreen, SearchScreen } from "screens";
 
 const Tab = createBottomTabNavigator<RootStackParamList>();
 
@@ -18,16 +20,16 @@ export const RootNavigators = () => {
         component={HomeNavigators}
         options={{
           tabBarIcon: ({ color }) => (
-            <Button color={color} icon="home" size={24} />
+            <Ionicons color={color} name="home" size={24} />
           ),
         }}
       />
       <Tab.Screen
         name="Search"
-        component={HomeNavigators}
+        component={SearchScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <Button color={color} icon="search" size={24} />
+            <Ionicons color={color} name="search" size={24} />
           ),
         }}
       />
@@ -47,19 +49,19 @@ export const RootNavigators = () => {
       />
       <Tab.Screen
         name="Personal"
-        component={HomeNavigators}
+        component={ProfileScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <Button color={color} icon="person" size={24} />
+            <Ionicons color={color} name="person" size={24} />
           ),
         }}
       />
       <Tab.Screen
         name="Gift"
-        component={HomeNavigators}
+        component={GiftScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <Button color={color} icon="gift-sharp" size={24} />
+            <Ionicons color={color} name="gift-sharp" size={24} />
           ),
         }}
       />
