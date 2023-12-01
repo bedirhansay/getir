@@ -11,10 +11,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-
-    "expo": {
-      "experiments": { "tsconfigPaths": true }
-    },
+    "experiments": { "tsconfigPaths": true },
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true

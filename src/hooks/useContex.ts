@@ -1,7 +1,4 @@
-import {
-  ContextProps,
-  StoreContext,
-} from "contextProvider/Provider/ContextProvider";
+import { ContextProps, StoreContext } from "context/provider/ContextProvider";
 import { useContext } from "react";
 import { getCart } from "utils/api/api";
 
@@ -22,7 +19,7 @@ export const useContexData = () => {
       (item) => (total += data[item].product.fiyat * data[item].quantity)
     );
 
-    context.setTotalPrice(total);
+    context.totalPrice = total;
   };
 
   if (context.totalPrice === 0) {

@@ -1,12 +1,6 @@
-import React, {
-  createContext,
-  useEffect,
-  useMemo,
-  useReducer,
-  useState,
-} from "react";
+import { cartReducers } from "context/reducers/CartReducers";
+import React, { createContext, useEffect, useMemo, useReducer } from "react";
 import { getCart } from "utils/api/api";
-import { cartReducers } from "contextProvider/reducers/CartReducer";
 
 export type ContextProps = {
   cart: any[];

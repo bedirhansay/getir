@@ -4,7 +4,7 @@ import {
 } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { tabHiddenRoutes } from "constants/HiddenRoutes";
-import { ContextProvider } from "contextProvider/Provider/ContextProvider";
+import { ContextProvider } from "context/provider/ContextProvider";
 import { useLayoutEffect } from "react";
 import { CategoryFilterScreen, HomeScreen, ProductDetailScreen } from "screens";
 import { CartScreen } from "screens/CartScreen/CartScreen";

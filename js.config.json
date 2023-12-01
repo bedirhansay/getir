@@ -8,8 +8,7 @@
       "utils/*": ["./src/utils/*"],
       "assets/*": ["./src/assets/*"],
       "constants/*": ["./src/constants/*"],
-      "contextProvider/*": ["./src/contextProvider/*"],
-      "reducers/*": ["./src/contextProvider/reducers/*"],
+      "context/*": ["./src/context/*"],
       "helpers/*": ["./src/helpers/*"],
       "hooks/*": ["./src/hooks/*"],
       "theme/*": ["./src/theme/*"]

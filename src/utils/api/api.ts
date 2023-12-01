@@ -1,5 +1,4 @@
 import axios from "axios";
-import { useContexData } from "hooks/useContex";
 
 const Uri = "https://expense-tracker-39a41-default-rtdb.firebaseio.com";
 
