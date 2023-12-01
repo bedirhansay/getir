@@ -3,7 +3,6 @@ import React from "react";
 import { TProduct } from "utils";
 
 export const DetailBox = ({ product }: { product: TProduct }) => {
-  console.log(product);
   return (
     <View className=" bg-white">
       <View className="m-auto items-center space-y-2 pt-4 pb-4 w-2/3">

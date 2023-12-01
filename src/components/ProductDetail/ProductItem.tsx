@@ -5,6 +5,8 @@ import { Colors } from "constants/colors";
 import { TProduct } from "utils";
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigation } from "utils/types/NavigatorTypes";
+import { useContexData } from "hooks/useContex";
+import { AddProductCart } from "utils/api/api";
 
 type ProductDetailsParams = {
   item: TProduct;
@@ -14,6 +16,14 @@ export const ProductItem: FC<ProductDetailsParams> = ({ item }) => {
   const { width, height } = Dimensions.get("window");
   const productWidth = width / 3;
   const nav = useNavigation<StackNavigation>();
+
+  const { addProductToCart } = useContexData();
+
+  const AddCart = async (item) => {
+    addProductToCart(item);
+    await AddProductCart(item);
+  };
+
   return (
     <Pressable
       style={{
@@ -52,8 +62,8 @@ export const ProductItem: FC<ProductDetailsParams> = ({ item }) => {
         </Text>
       </View>
       <Button
-        onPress={() => console.log("+ yazar")}
-        className="rounded-md bg-white border-gray-400 w-8 h-8 shadow-xl absolute  right-[-10] top-[-10]"
+        onPress={() => AddCart(item)}
+        className="rounded-md bg-white border-gray-400 w-8 h-8  absolute  right-[-10] top-[-10]"
         size={28}
         icon={"add"}
         color={Colors.purple}

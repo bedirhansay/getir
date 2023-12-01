@@ -5,11 +5,14 @@ import { TProduct } from "utils";
 import { DetailBox, DetailFeatures, ImageCarousel } from "components";
 import { Colors } from "constants/colors";
 import { Button } from "components/ui/Button";
+import { useContexData } from "hooks/useContex";
+import { AddProductCart } from "utils/api/api";
 
 export const ProductDetailScreen = ({ navigation, route }) => {
   const [product, setProduct] = useState<TProduct>();
-
   const nav = useNavigation();
+
+  const { addProductToCart } = useContexData();
 
   useEffect(() => {
     setProduct(route.params.item);
@@ -19,6 +22,10 @@ export const ProductDetailScreen = ({ navigation, route }) => {
     <ActivityIndicator color={Colors.purple} />;
   }
 
+  const PressHandler = async (product) => {
+    addProductToCart(product);
+    await AddProductCart(product);
+  };
   return (
     <ScrollView>
       <ImageCarousel images={product?.images} />
@@ -28,6 +35,7 @@ export const ProductDetailScreen = ({ navigation, route }) => {
       </Text>
       <DetailFeatures />
       <Button
+        onPress={() => PressHandler(product)}
         title="Sepete Ekle"
         className="bg-white w-full mt-4 items-center"
         textClassname={[
