@@ -3,16 +3,16 @@
     "baseUrl": ".",
     "paths": {
       "src/*": ["./src/*"],
-      "assets/*": ["./src/assets/*"],
       "components/*": ["./src/components/*"],
+      "screens/*": ["./src/screens/*"],
+      "utils/*": ["./src/utils/*"],
+      "assets/*": ["./src/assets/*"],
       "constants/*": ["./src/constants/*"],
+      "contextProvider/*": ["./src/contextProvider/*"],
+      "reducers/*": ["./src/contextProvider/reducers/*"],
       "helpers/*": ["./src/helpers/*"],
       "hooks/*": ["./src/hooks/*"],
-      "navigations/*": ["./src/navigations/*"],
-      "redux/*": ["./src/redux/*"],
-      "screens/*": ["./src/screens/*"],
-      "theme/*": ["./src/theme/*"],
-      "utils/*": ["./src/utils/*"]
+      "theme/*": ["./src/theme/*"]
     }
   }
 }

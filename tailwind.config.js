@@ -14,6 +14,8 @@ module.exports = {
         grayBackground: "#f5f5f5",
         filterBg: "#7849F7",
         heartColor: "#32177a",
+        openedGray: "#f8f8f8",
+        boxShadow: " -1px -1px 34px -6px rgba(212,49,212,1)",
       },
       screens: {
         xs: { max: "319px" },
