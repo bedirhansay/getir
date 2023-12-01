@@ -39,7 +39,7 @@ export const RootNavigators = () => {
         options={{
           tabBarIcon: ({ color }) => (
             <Button
-              className="bg-purple w-14 h-14 items-center justify-center rounded-full border-4 border-gray-200  shadow-xl m-[-12]"
+              className="bg-purple w-14 h-14 items-center justify-center rounded-full border-4 border-gray-200   m-[-12]"
               icon="list"
               size={32}
               color={Colors.yellow}

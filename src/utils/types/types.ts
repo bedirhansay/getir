@@ -6,13 +6,13 @@ export type TCategory = {
 };
 
 export type TProduct = {
-  readonly id: string;
-  readonly image: string;
-  readonly images: string[];
-  readonly name: string;
-  readonly miktar: string;
-  readonly fiyat: number;
-  readonly fiyatIndirimli?: number;
+  id: string;
+  image: string;
+  images: string[];
+  name: string;
+  miktar: string;
+  fiyat: number;
+  fiyatIndirimli?: number;
 };
 
 export type TFiltering = {

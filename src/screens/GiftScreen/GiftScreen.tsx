@@ -16,8 +16,8 @@ export const GiftScreen = () => {
 
       <Button
         className="bg-blue-300"
-        title="Go Back Category Home"
-        onPress={() => nav.navigate("Home")}
+        title="Go Back Category Cart"
+        onPress={() => nav.navigate("CartScreen")}
       />
     </SafeAreaView>
   );

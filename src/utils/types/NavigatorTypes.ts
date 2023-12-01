@@ -9,10 +9,15 @@ export type ScreenNames = [
   "CategoryDetails",
   "ProductDetails",
   "Home",
-  "List"
+  "List",
+  "CartScreen"
 ];
 type ProductDetailsParams = {
   item: TProduct;
+};
+
+type CategoryDetailsParams = {
+  id: number | string;
 };
 
 export type RootStackParamList = {
@@ -20,9 +25,10 @@ export type RootStackParamList = {
   Search: undefined;
   Personal: undefined;
   Gift: undefined;
-  CategoryDetails: undefined;
+  CategoryDetails: CategoryDetailsParams;
   ProductDetails: ProductDetailsParams;
   Home: undefined;
   List: undefined;
+  CartScreen: undefined;
 };
 export type StackNavigation = NavigationProp<RootStackParamList>;

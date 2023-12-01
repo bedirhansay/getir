@@ -1,16 +1,18 @@
 import {
   getFocusedRouteNameFromRoute,
-  useNavigation,
   useRoute,
 } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { tabHiddenRoutes } from "constants/HiddenRoutes";
+import { ContextProvider } from "contextProvider/Provider/ContextProvider";
 import { useLayoutEffect } from "react";
 import { CategoryFilterScreen, HomeScreen, ProductDetailScreen } from "screens";
+import { CartScreen } from "screens/CartScreen/CartScreen";
 import {
   CategoryDetailNavigatorOptions,
   HomeNavigatorOptions,
   ProductDetailNavigatorOptions,
+  CartNavigatorOptions,
 } from "utils";
 
 const Stack = createStackNavigator();
@@ -28,22 +30,29 @@ export const HomeNavigators = ({ navigation }) => {
   }, [navigation, route]);
 
   return (
-    <Stack.Navigator>
-      <Stack.Screen
-        name="Home"
-        component={HomeScreen}
-        options={HomeNavigatorOptions}
-      />
-      <Stack.Screen
-        name="CategoryDetails"
-        component={CategoryFilterScreen}
-        options={CategoryDetailNavigatorOptions}
-      />
-      <Stack.Screen
-        name="ProductDetails"
-        component={ProductDetailScreen}
-        options={ProductDetailNavigatorOptions}
-      />
-    </Stack.Navigator>
+    <ContextProvider>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={HomeNavigatorOptions}
+        />
+        <Stack.Screen
+          name="CategoryDetails"
+          component={CategoryFilterScreen}
+          options={CategoryDetailNavigatorOptions}
+        />
+        <Stack.Screen
+          name="ProductDetails"
+          component={ProductDetailScreen}
+          options={ProductDetailNavigatorOptions}
+        />
+        <Stack.Screen
+          name="CartScreen"
+          component={CartScreen}
+          options={CartNavigatorOptions}
+        />
+      </Stack.Navigator>
+    </ContextProvider>
   );
 };
